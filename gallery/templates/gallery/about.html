@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+    <title>3D Storage - О проекте</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'gallery/style.css' %}">
+    <style>
+        .about-container { max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+        .about-container h2 { color: #333; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .creator-list { list-style: none; padding: 0; }
+        .creator-list li { padding: 12px; background: white; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .creator-list strong { color: #007bff; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ page_title }}</h1>
+    </header>
+    <main class="about-container">
+        <h2>Создатели проекта</h2>
+        <ul class="creator-list">
+            {% for asset in assets %}
+                <li><strong>{{ asset.name }}</strong></li>
+            {% empty %}
+                <li>Нет доступных данных.</li>
+            {% endfor %}
+        </ul>
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="{% url 'home' %}" class="btn" style="background-color: #28a745;">← Вернуться в галерею</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Web Structures Course</p>
+    </footer>
+</body>
+</html>

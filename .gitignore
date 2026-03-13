@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Django
+db.sqlite3
+local_settings.py
+*.log
+
+# Environment variables (CRITICAL: Don't leak secrets!)
+.env
+.env.local
+.env.*.local
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Media files (User uploads - not stored in Git)
+media/
+
+# Static files collection folder
+staticfiles/
+
+# OS
+.DS_Store
+Thumbs.db
